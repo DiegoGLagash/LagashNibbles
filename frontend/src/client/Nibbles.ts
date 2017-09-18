@@ -93,9 +93,9 @@ export class Nibbles {
             let x = area.x;
             let y = area.y;
             if( x >= y ) {
-                x = Math.ceil(x / 2);
+                x = Math.floor(x / 2);
             }else if ( x < y ) {
-                y = Math.ceil(y / 2);
+                y = Math.floor(y / 2);
             }
             spaceAreas.push(new SpaceArea(x, y));
             spaceAreas.push(new SpaceArea(x, y));
@@ -106,10 +106,10 @@ export class Nibbles {
         for(let i = 0; i < spaceAreas.length; i++) {
             if( curX + spaceAreas[i].x > this.space.topX) {
                 curX = 0;
-                curY += spaceAreas[i].y;
+                curY += spaceAreas[i-1].y;
             }else if( curY + spaceAreas[i].y > this.space.topY) {
                 curY = 0;
-                curX += spaceAreas[i].x;
+                curX += spaceAreas[i-1].x;
             }
             let topX = curX + spaceAreas[i].x;
             let topY = curY + spaceAreas[i].y;
