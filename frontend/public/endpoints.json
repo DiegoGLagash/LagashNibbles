@@ -3,14 +3,14 @@
         {
             "id": 1,
             "name": "👾",
-            "description" : "DummyJS",
+            "description" : "TheDude",
             "color": "red",
             "url": "http://localhost:9091/nextMove"
         },
         {
             "id": 2,
             "name": "🐛",
-            "description" : "DummyTS",
+            "description" : "Dummy",
             "color": "blue",
             "url": "http://localhost:9092/nextMove"
         },
@@ -31,9 +31,16 @@
         {
             "id": 5,
             "name": "💨",
-            "description" : "LowEntroy",
+            "description" : "LowEntropy",
             "color": "gray",
             "url": "http://localhost:9095/nextMove"
+        },
+        {
+            "id": 6,
+            "name": "💊",
+            "description" : "Random",
+            "color": "violet",
+            "url": "http://localhost:9097/nextMove"
         }
     ]
 }

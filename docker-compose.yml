@@ -61,3 +61,13 @@ services:
       - "9095:9000"
     cpu_shares: 256
     mem_limit: 50M
+  nibblerandom:
+    restart: always
+    build: 
+      context: ./nibblerandom
+    volumes:
+      - ./nibblerandom/server.js:/app/server.js
+    ports:
+      - "9097:9000"
+    cpu_shares: 256
+    mem_limit: 50M
