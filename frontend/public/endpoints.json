@@ -25,7 +25,7 @@
             "id": 4,
             "name": "🐹",
             "description" : "Hamster",
-            "color": "yellow",
+            "color": "orange",
             "url": "http://localhost:9094/nextMove"
         },
         {
