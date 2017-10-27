@@ -47,15 +47,19 @@ export class HttpBehavior implements ISnakeBehavior {
                 "snakes": payloadSnakes
             }
             jQuery.ajax({
-                url: this.endpoint, //'http://localhost:8000/nextMove',
+                url: this.endpoint,
                 data: JSON.stringify(payload),
                 dataType: 'json',
                 contentType: 'application/json',
                 type: 'POST',
+                timeout: 2000,
                 success: function (result) {
                     let newDir: Direction = (<any>Direction)[result.direction];
                     if (result.isOk === false) console.log(result);
                     return resolve(newDir);
+                },
+                error: function() {
+                    return resolve(0);
                 }
             });
         });

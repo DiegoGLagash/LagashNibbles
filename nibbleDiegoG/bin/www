@@ -3,7 +3,7 @@
 
 //module dependencies
 var server = require("../dist/server");
-var debug = require("debug")("nibble:ts");
+var debug = require("debug")("nibble:diegog");
 var http = require("http");
 
 //create http server

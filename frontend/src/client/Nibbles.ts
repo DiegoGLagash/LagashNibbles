@@ -167,11 +167,19 @@ export class Nibbles {
                 .then((res) => {
                     for(let i: number = 0; i < newList.length; i++) {
                         let snake = newList[i];
-                        let newDir: Direction = res[i];
-                        
-                        // If opposite direction, keep same
-                        if(!snake.isOpositeDirection(newDir)) {
-                            snake.changeDirection(newDir);
+                        if(res[i] !== 0) {
+                            let newDir: Direction = res[i];
+                            
+                            // If opposite direction, keep same
+                            if(!snake.isOpositeDirection(newDir)) {
+                                snake.changeDirection(newDir);
+                            }
+                        }
+                        if(res[i] === 0 ){
+                            this.loser = snake;
+                            this.hit = true;
+                            this.hitTarget = -2;
+                            break;                            
                         }
                         if(snake.willHitNextStep(this.space)) {
                             this.loser = snake;
@@ -182,7 +190,7 @@ export class Nibbles {
                                 let newPos = this.loser.moveNewDirection(this.loser.direction);
                                 let otherHit = this.snakes.find( (s) => { return s.id === idx; });
                                 if(otherHit.x === newPos.x &&
-                                   otherHit.y === newPos.y) {
+                                otherHit.y === newPos.y) {
                                     this.loser2 = otherHit;
                                 }
                             }

@@ -9,6 +9,7 @@ services:
     ports:
       - "9090:9000"
   nibblejs:
+    restart: always
     build: 
       context: ./nibbleappjs
     volumes:
@@ -18,6 +19,7 @@ services:
     cpu_shares: 256
     mem_limit: 50M
   nibblets:
+    restart: always
     build:
       context: ./nibbleAppTS
     volumes:
@@ -25,5 +27,37 @@ services:
       - ./nibbleAppTS/bin:/app/bin
     ports:
       - "9092:9000"
+    cpu_shares: 256
+    mem_limit: 50M
+  nibbleesteban:
+    restart: always
+    build:
+      context: ./nibbleEsteban
+    ports:
+      - "9093:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    cpu_shares: 256
+    mem_limit: 50M
+  nibblenelson:
+    restart: always
+    build:
+      context: ./nibbleNelson
+    volumes:
+      - ./nibbleNelson/dist:/app/dist
+      - ./nibbleNelson/bin:/app/bin
+    ports:
+      - "9094:9000"
+    cpu_shares: 256
+    mem_limit: 50M
+  nibblediegog:
+    restart: always
+    build:
+      context: ./nibbleDiegoG
+    volumes:
+      - ./nibbleDiegoG/dist:/app/dist
+      - ./nibbleDiegoG/bin:/app/bin
+    ports:
+      - "9095:9000"
     cpu_shares: 256
     mem_limit: 50M

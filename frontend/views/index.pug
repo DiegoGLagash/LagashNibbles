@@ -21,7 +21,7 @@ html
             li(style={'background-color': endpoint.color})
               input(type="checkbox", name=endpoint.name, id=endpoint.name, value=endpoint.id)
               if(endpoint.name != "")
-                span=endpoint.name + " : " + endpoint.url
+                span=endpoint.name + " : " + endpoint.description
               else
                 span="🤦 : " + endpoint.url
         div(id='loser').loser

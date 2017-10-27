@@ -1,0 +1,7 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "typedef": false,
+    "only-arrow-functions": false
+  }
+}

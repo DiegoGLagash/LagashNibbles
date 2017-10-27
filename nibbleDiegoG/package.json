@@ -1,0 +1,46 @@
+{
+  "name": "nibbleappts",
+  "description": "A Nibble snake in Typescript",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Diego Gonzalez",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon --inspect ./bin/www",
+    "local": "NODE_ENV=development PORT=9092 nodemon --inspect=9232 ./bin/www",
+    "grunt": "grunt",
+    "start": "nodemon ./bin/www",
+    "test": "mocha -r ts-node/register test/**/*.ts",
+    "testdebug": "mocha --inspect-brk -r ts-node/register test/**/*.ts"
+  },
+  "dependencies": {
+    "@types/request": "^2.0.0",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "errorhandler": "^1.5.0",
+    "express": "^4.15.3",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-move": "^0.1.2",
+    "method-override": "^2.3.9",
+    "morgan": "^1.8.2",
+    "pug": "^2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.4",
+    "@types/chai": "^4.0.3",
+    "@types/cookie-parser": "^1.4.0",
+    "@types/errorhandler": "0.0.30",
+    "@types/method-override": "0.0.29",
+    "@types/mocha": "^2.2.41",
+    "@types/morgan": "^1.7.32",
+    "chai": "^4.1.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ts": "^6.0.0-beta.16",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.4.2"
+  }
+}

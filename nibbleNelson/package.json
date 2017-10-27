@@ -1,0 +1,41 @@
+{
+  "name": "hamsternibbles",
+  "description": "A Hamster implementation for the Nibbles Contest",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "NODE_ENV=development nodemon --inspect ./bin/www",
+    "local": "SET port=9093 && nodemon --inspect=9233 ./bin/www"
+  },
+  "keywords": [
+    "hamster",
+    "nibbles"
+  ],
+  "author": "Nelson G. Ghezzi",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.5",
+    "@types/errorhandler": "0.0.31",
+    "@types/morgan": "^1.7.33",
+    "@types/request": "^2.0.3",
+    "errorhandler": "^1.5.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ts": "^6.0.0-beta.16",
+    "nodemon": "^1.12.1",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.3"
+  }
+}

@@ -3,26 +3,37 @@
         {
             "id": 1,
             "name": "👾",
+            "description" : "DummyJS",
             "color": "red",
             "url": "http://localhost:9091/nextMove"
         },
         {
             "id": 2,
-            "name": "B",
+            "name": "🐛",
+            "description" : "DummyTS",
             "color": "blue",
             "url": "http://localhost:9092/nextMove"
         },
         {
             "id": 3,
-            "name": "",
+            "name": "👀",
+            "description" : "Herby",
             "color": "green",
-            "url": "http://localhost:9091/nextMove"
+            "url": "http://localhost:9093/nextMove"
         },
         {
             "id": 4,
-            "name": "🐛",
+            "name": "🐹",
+            "description" : "Hamster",
             "color": "yellow",
-            "url": "http://localhost:9092/nextMove"
+            "url": "http://localhost:9094/nextMove"
+        },
+        {
+            "id": 5,
+            "name": "💨",
+            "description" : "LowEntroy",
+            "color": "gray",
+            "url": "http://localhost:9095/nextMove"
         }
     ]
 }
