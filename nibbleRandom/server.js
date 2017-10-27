@@ -35,7 +35,7 @@ app.post('/nextMove', (req, res) => {
 		y: req.body.snake.y
 	};
 
-	if(req.body.snake.ticks % 2 == 0) {
+	if(req.body.snake.ticks % 4 == 0) {
 		dirArray = shuffle(dirArray);		
 	}
 	//Busco nueva dirección 

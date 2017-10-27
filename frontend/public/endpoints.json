@@ -2,7 +2,7 @@
     "endpoints": [
         {
             "id": 1,
-            "name": "👾",
+            "name": "🕶",
             "description" : "TheDude",
             "color": "red",
             "url": "http://localhost:9091/nextMove"
