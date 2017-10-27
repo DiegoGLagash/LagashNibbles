@@ -318,31 +318,39 @@ export class NextMoveRoute extends BaseRoute {
     for (const snakeState of otherSnakes) {
       const snake = snakeState.snake;
 
-      let i: number = 1;
+      let pos = snake.moveNew();
 
-      for (i; i <= 4; i++) {
-        const dir = Direction[Direction[i]];
-
-        if (snake.isOpositeDirection(dir)) {
-          continue;
-        }
-
-        const pos = snake.moveNewDirection(dir);
-
-        if (!pos.isValidInBounds(space)) {
-          continue;
-        }
-
-        if (space.map[pos.x][pos.y] !== space.EMPTY) {
-          continue;
-        }
-
+      if (pos.isValidInBounds(space) && space.map[pos.x][pos.y] === space.EMPTY) {
         snake.x = pos.x;
         snake.y = pos.y;
-        snake.direction = dir;
         space.map[pos.x][pos.y] = snake.id;
+      } else {
+        let i: number = 1;
 
-        break;
+        for (i; i <= 4; i++) {
+          const dir = Direction[Direction[i]];
+
+          if (snake.isOpositeDirection(dir)) {
+            continue;
+          }
+
+          pos = snake.moveNewDirection(dir);
+
+          if (!pos.isValidInBounds(space)) {
+            continue;
+          }
+
+          if (space.map[pos.x][pos.y] !== space.EMPTY) {
+            continue;
+          }
+
+          snake.x = pos.x;
+          snake.y = pos.y;
+          snake.direction = dir;
+          space.map[pos.x][pos.y] = snake.id;
+
+          break;
+        }
       }
 
       // if (i === 5) {

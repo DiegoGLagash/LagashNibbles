@@ -2,6 +2,8 @@
   "extends": "tslint:recommended",
   "rules": {
     "typedef": false,
-    "only-arrow-functions": false
+    "only-arrow-functions": false,
+    "arrow-parens": false,
+    "max-classes-per-file": false
   }
 }
